@@ -1,0 +1,109 @@
+2026-11-21 18:15:49,344 - INFO - Cliente registrado: Ana Pérez
+2026-11-21 18:15:49,346 - INFO - Finalizó la prueba 1
+2026-11-21 18:15:49,347 - ERROR - Error en prueba 2
+Traceback (most recent call last):
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 299, in ejecutar_operacion
+    resultado = funcion()
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 347, in <lambda>
+    lambda: Cliente("C002", "", "invalido@gmail.com", "3001234567")
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 60, in __init__
+    self.nombre = nombre
+    ^^^^^^^^^^^
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 71, in nombre
+    raise DatosInvalidosError(
+        "El nombre debe tener al menos 2 caracteres."
+    )
+DatosInvalidosError: El nombre debe tener al menos 2 caracteres.
+2026-11-21 18:15:49,373 - INFO - Finalizó la prueba 2
+2026-11-21 18:15:49,374 - INFO - Cliente registrado: Carlos Gómez
+2026-11-21 18:15:49,374 - INFO - Finalizó la prueba 3
+2026-11-21 18:15:49,375 - INFO - Servicio registrado: Sala de reuniones
+2026-11-21 18:15:49,378 - INFO - Finalizó la prueba 4
+2026-11-21 18:15:49,379 - INFO - Servicio registrado: Proyector
+2026-11-21 18:15:49,380 - INFO - Finalizó la prueba 5
+2026-11-21 18:15:49,380 - INFO - Servicio registrado: Asesoría en programación
+2026-11-21 18:15:49,381 - INFO - Finalizó la prueba 6
+2026-11-21 18:15:49,382 - ERROR - Error en prueba 7
+Traceback (most recent call last):
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 299, in ejecutar_operacion
+    resultado = funcion()
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 396, in <lambda>
+    lambda: ServicioSala("S002", "Sala inválida", 0)
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 114, in __init__
+    raise DatosInvalidosError("La tarifa debe ser mayor que cero.")
+DatosInvalidosError: La tarifa debe ser mayor que cero.
+2026-11-21 18:15:49,589 - INFO - Finalizó la prueba 7
+2026-11-21 18:15:49,589 - INFO - Reserva creada: R001
+2026-11-21 18:15:49,590 - INFO - Finalizó la prueba 8
+2026-11-21 18:15:49,590 - INFO - Reserva R001 confirmada.
+2026-11-21 18:15:49,590 - INFO - Finalizó la prueba 9
+2026-11-21 18:15:49,590 - INFO - Reserva R001 procesada. Total: $107100.00
+2026-11-21 18:15:49,590 - INFO - Finalizó la prueba 10
+2026-11-21 18:15:49,591 - ERROR - Error en prueba 11
+Traceback (most recent call last):
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 201, in __init__
+    servicio.validar_parametros(duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 159, in validar_parametros
+    raise DatosInvalidosError("La sala debe reservarse entre 1 y 12 horas.")
+DatosInvalidosError: La sala debe reservarse entre 1 y 12 horas.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 299, in ejecutar_operacion
+    resultado = funcion()
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 430, in <lambda>
+    lambda: Reserva("R002", cliente_2, sala, 0)
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 204, in __init__
+    raise ReservaError(
+        "No fue posible crear la reserva."
+    ) from error
+ReservaError: No fue posible crear la reserva.
+2026-11-21 18:15:49,592 - INFO - Finalizó la prueba 11
+2026-11-21 18:15:49,592 - INFO - Reserva creada: R003
+2026-11-21 18:15:49,592 - INFO - Reserva R003 confirmada.
+2026-11-21 18:15:49,592 - INFO - Reserva R003 cancelada.
+2026-11-21 18:15:49,592 - INFO - Finalizó la prueba 12
+2026-11-21 18:15:49,593 - ERROR - Error en prueba 13
+Traceback (most recent call last):
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 299, in ejecutar_operacion
+    resultado = funcion()
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 450, in <lambda>
+    lambda: reserva_2.procesar()
+            ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 239, in procesar
+    raise ReservaError(
+        "La reserva debe estar confirmada antes de procesarse."
+    )
+ReservaError: La reserva debe estar confirmada antes de procesarse.
+2026-11-21 18:15:49,594 - INFO - Finalizó la prueba 13
+2026-11-21 18:15:49,594 - ERROR - Error en prueba 14
+Traceback (most recent call last):
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 200, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 122, in validar_disponibilidad
+    raise ServicioNoDisponibleError(
+        f"El servicio {self.nombre} no está disponible."
+    )
+ServicioNoDisponibleError: El servicio Computador portátil no está disponible.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 299, in ejecutar_operacion
+    resultado = funcion()
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 461, in <lambda>
+    lambda: Reserva("R004", cliente_1, servicio_no_disponible, 1)
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\luis abel\OneDrive\Documentos\software-fj-fase-4\main.py", line 204, in __init__
+    raise ReservaError(
+        "No fue posible crear la reserva."
+    ) from error
+ReservaError: No fue posible crear la reserva.
+2026-11-21 18:15:49,595 - INFO - Finalizó la prueba 14
+2026-11-21 18:15:49,595 - INFO - Finalizó la prueba 15
